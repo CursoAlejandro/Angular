@@ -1,0 +1,26 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "description": "Ejercicios de AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CursoAlejandro/Angular.git"
+  },
+  "keywords": [
+    "AngularJS"
+  ],
+  "author": "Alejandro Roca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CursoAlejandro/Angular/issues"
+  },
+  "homepage": "https://github.com/CursoAlejandro/Angular#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angularjs": "0.0.1"
+  }
+}
