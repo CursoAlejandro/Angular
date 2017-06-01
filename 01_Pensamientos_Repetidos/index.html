@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	Se muestra el uso de la directiva ngRepeat
+	añadiendo la posibilidad de que haya eleemntos repetidos-->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de angularJS">
+	<meta name="generator" content="Visual Studio Code" >
+	<meta charset="UTF-8">
+	<title>Pensamientos</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+	<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
+</head>
+
+<body ng-app="miApp" ng-controller="MainController">
+	<!-- Anti-patrón: se inicializa el modelo en una directiva. 
+		 Lo más adecuado es hacerlo en el controler -->	
+	<header>
+		<h1>Pensamientos</h1>
+	</header>
+	<article>
+		<form name="formulario">
+			<label for="fNombre">Indica tu nombre</label>
+			<input type="text" id="fNombre" ng-model="nombre">
+			<label for="fIdea" id="lblIdea">Comparte una idea</label>
+			<input type="text" id="fIdea" ng-model="nuevoPensamiento">
+			<label></label>
+			<input type="button" id="boton" value="Añadir" 
+			ng-click="botonAdd()">	
+		</form>
+
+		<p>Hola {{nombre}}</p>
+		<h2>Pensamientos que has tenido</h2>
+		<ul>	
+			<li ng-repeat="pensamiento in aPensamientos track by $index">
+				Tu pensamiento número {{$index + 1}} fue: <q>{{pensamiento}}</q></li>
+		</ul>			
+	</article>
+	<footer>
+		<p>Alejandro L. Cerezo - Madrid 2017</p>
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>

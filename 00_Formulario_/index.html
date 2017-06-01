@@ -13,27 +13,28 @@
 	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="icon" href="fav_icon.png">
-	<script src="../node_modules/angular/angular.js">
-	
-	</script>
+	<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
 </head>
-<!-- AntiPatron , iniciamos variables de scope -->
-<body ng-app ng-init="sCurso = 'Curso Angular'; sNombre='Pepe' ">	 	
+
+<body ng-app="miApp" ng-controller="MainController">	 	
 	<header>
 		<h1>Formulario de saludo</h1>
 	</header>
 	<article>
 		<form name="formulario">
-			<label for="fNombre" >Indica tu nombre</label> <!-- Lo usaremos id -->
-			<!--Asociamos input a una variabl demodelo  ng-model la vinculamos al input -->
-			<input type="text" id="sNombre" ng-model="sNombre">
+			<label for="Numero" id="Numero">Indica tu numero</label> <!-- Lo usaremos id -->
+			<input type="text" id="fNumero" ng-model="numero">
 			<label></label>
-			<!-- Asociamos una operacion con el evento click -->
-			<input type="button"  id="btnBorrar" value="Borrar nombre" ng-click="sNombre''">	<!-- Lo usaremos id -->
+			<input type="button"  id="btnIncrementar" value="incrementar" ng-click="botonI()">	<!-- Lo usaremos id -->
+			<input type="button"  id="btnDecrementar" value="decrementar" ng-click="botonD()">
 		</form>
-<!-- Presentamos mediante expresiones los valores de scope-->
-		<p>Hola <span id="nombre" class="destacado">{{sNombre}}</span>.</p> <!-- Lo usaremos id -->
-		<p>Bienvenid@ al curso de <strong  class="destacado">{{sCurso}}</strong>.</p>
+
+		<p>Hola {{numero}}</p>
+		<ul><li ng-repeat="Numero">
+			</li></ul>
+
+		<p>Hola <span id="nombre" class="destacado"></span>.</p> <!-- Lo usaremos id -->
+		<p>Bienvenid@ al curso de <strong  class="destacado"></strong>.</p>
 	
 		
 	</article>
