@@ -5,7 +5,6 @@
 		<title>Select Options - JS</title>
         <meta charset="utf-8">
         <meta name="description" content="Ejercicios del Curso CMF">
-        <meta name="author" content="Alejandro">
         <meta name="keywords" content="javascript">		
         <link rel="shortcut icon" href="fav_icon.png">
 		<link rel="stylesheet" href="css/default.css">
@@ -52,12 +51,12 @@
 
 			function cambioGenero(oE) { // Entra aqui AL SELECCIONAR GENERO	
 				var domSelect = oE.currentTarget; // La propiedad de evento currentTarget devuelve el elemento cuyo detectores de eventos activado el evento.
-				if (domSelect.childElementCount > aGeneros.length) { //Numero de elementos descendientes es mayor que el numero de numero de cursos [3]
+				if (domSelect.childElementCount > aGeneros.length) { // Si Numero de elementos descendientes es mayor que el numero de numero de cursos [3]
 
-					domSelect.removeChild(domSelect.children[0]);
+					domSelect.removeChild(domSelect.children[0]); // Mi evento removera el hijo del nodo deuvelve en un array los nodos de los elementos
 				}
-				let nSelect = domSelect.selectedIndex;
-				let domOption = domSelect.options[nSelect];
+				let nSelect = domSelect.selectedIndex; // OBliga a leegir un elemento de la lista
+				let domOption = domSelect.options[nSelect]; // accede a la opcion de la lista array crreado aut por navegador 
 				sSelectedGenero = domOption.text;
 				// las tres lineas en una 
 				// sSelectedGenero domSelect.options[domSelect.selectedIndex].text;
@@ -78,13 +77,10 @@
 			}
 
 			function enviar() {
-				return confirm("Desaa solicitar los datos de " + sSelectedAutor); //envia y confirma
+				return confirm("Desea solicitar los datos de " + sSelectedAutor); //envia y confirma
 			}
 
 		
-
-
-
 			
 		};//fin del onload
 
