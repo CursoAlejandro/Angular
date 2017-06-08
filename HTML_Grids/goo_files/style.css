@@ -7,10 +7,27 @@ body {
     margin: 2em auto;
 }
 
+li ul{
+    display: none
+}
+
+li:hover > ul {
+    display :block;
+    
+}
+
+li{
+    position: relative;
+}
+
 header {
     background-color: maroon;
     color : papayawhip;
 
+}
+
+img {
+     background-size: 25% 25%;
 }
 
 nav {
@@ -63,3 +80,4 @@ footer {
         position:relative;
         float :left;
 }
+
