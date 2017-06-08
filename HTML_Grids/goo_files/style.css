@@ -1,0 +1,65 @@
+*, *::before, *::after, *:before, *:after { 
+    box-sizing : border-box;
+    }
+
+body {
+    width: 90%;
+    margin: 2em auto;
+}
+
+header {
+    background-color: maroon;
+    color : papayawhip;
+
+}
+
+nav {
+    border: 1px solid maroon;
+    overflow: auto;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: block;
+    float: left;
+}
+
+body>section, body>div {
+    float: left;
+}
+
+body>section {
+    width: 69%;
+    margin-right: 2%;
+    padding: 2em;
+}
+
+body>div {
+    width: 29%;
+    padding: 1em;
+}
+
+.clear_fix {
+    clear: both;
+}
+
+
+
+footer {
+    border-top: 1px solid maroon;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+        
+    }
+
+    .container_2{
+        width: 80%;
+        position:relative;
+        float :left;
+}
